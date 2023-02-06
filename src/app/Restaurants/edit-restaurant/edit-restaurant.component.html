@@ -1,0 +1,101 @@
+<body>
+    <div class="background">
+        <div class="container ">
+            <h1 class="mb-3"> Update Merchant Details</h1>
+            <div class="row">
+                <div class="col-6">
+                    <form [formGroup]="formData" (ngSubmit)="UpdateRestaurant()">
+
+                        <div class="mb-3">
+                            <label for="restaurantName" class="form-label" id="label">Restaurant Name</label>
+                            <input type="text" class="form-control" id="restaurantName" placeholder="Restaurant's Name "
+                                name="restaurantName" formControlName="restaurantName"
+                                [ngModel]="addRestaurantRequest.restaurantName"
+                                [ngClass]="{'is-invalid': (formData.get('restaurantName')?.touched || formData.get('restaurantName')?.dirty) && !formData.get('restaurantName')?.valid}"><br>
+                            <span class="invalid-feedback">
+                                <span *ngIf="formData.get('restaurantName')?.errors?.['required']">Restaurant is
+                                    Required
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label" id="label">Contact Name</label>
+                            <input type="text" class="form-control" id="contactName" formControlName="contactName"
+                                placeholder="Recipient's username" [ngModel]="addRestaurantRequest.contactName"
+                                [ngClass]="{'is-invalid': (formData.get('contactName')?.touched || formData.get('contactName')?.dirty) && !formData.get('contactName')?.valid}"><br>
+                            <span class="invalid-feedback">
+                                <span *ngIf="formData.get('contactName')?.errors?.['required']">ContactName is
+                                    Required
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="pinCode" class="form-label" id="label">PinCode</label>
+                            <input type="number" class="form-control" id="pinCode" placeholder="Pincode:-880"
+                                formControlName="pinCode" [ngModel]="addRestaurantRequest.pinCode"
+                                [ngClass]="{'is-invalid': (formData.get('pinCode')?.touched || formData.get('pinCode')?.dirty) && !formData.get('pinCode')?.valid}"><br>
+                            <span class="invalid-feedback">
+                                <span *ngIf="formData.get('pinCode')?.errors?.['required']">PinCode is
+                                    Required
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="location" class="form-label" id="label">Location</label>
+                            <input type="text" class="form-control" id="location" placeholder="Address"
+                                formControlName="location" [ngModel]="addRestaurantRequest.location"
+                                [ngClass]="{'is-invalid': (formData.get('location')?.touched || formData.get('location')?.dirty) && !formData.get('location')?.valid}"><br>
+                            <span class="invalid-feedback">
+                                <span *ngIf="formData.get('location')?.errors?.['required']">Location is
+                                    Required
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="website" class="form-label" id="label">Website</label>
+                            <input type="text" class="form-control" id="website" placeholder="www.gooogle.com"
+                                formControlName="website" [ngModel]="addRestaurantRequest.website"
+                                [ngClass]="{'is-invalid': (formData.get('website')?.touched || formData.get('website')?.dirty) && !formData.get('website')?.valid}"><br>
+                            <span class="invalid-feedback">
+                                <span *ngIf="formData.get('website')?.errors?.['required']">Website is
+                                    Required
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phonenumber" class="form-label" id="label">Phonenumber</label>
+                            <input type="number" class="form-control" id="phonenumber" placeholder="Phone number"
+                                formControlName="phonenumber" [ngModel]="addRestaurantRequest.phonenumber"
+                                [ngClass]="{'is-invalid': (formData.get('phonenumber')?.touched || formData.get('phonenumber')?.dirty) && !formData.get('phonenumber')?.valid}"><br>
+                            <span class="invalid-feedback">
+                                <span *ngIf="formData.get('phonenumber')?.errors?.['required']">Website is
+                                    Required
+                                </span>
+                            </span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="averageDailyTrasaction" class="form-label"
+                                id="label">AverageDailyTrasaction</label>
+                            <input type="number" class="form-control" id="averageDailyTrasaction"
+                                placeholder="Transaction details" formControlName="averageDailyTrasaction"
+                                [ngModel]="addRestaurantRequest.averageDailyTrasaction"
+                                [ngClass]="{'is-invalid': (formData.get('averageDailyTrasaction')?.touched || formData.get('averageDailyTrasaction')?.dirty) && !formData.get('averageDailyTrasaction')?.valid}"><br>
+                            <span class="invalid-feedback">
+                                <span *ngIf="formData.get('averageDailyTrasaction')?.errors?.['required']">Website is
+                                    Required
+                                </span>
+                            </span>
+                        </div>
+                        <button type="submit" [disabled]="!formData.valid " class="btn btn-primary">Save </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

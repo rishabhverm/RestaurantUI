@@ -1,0 +1,29 @@
+.mb-3 {
+
+    color: #054d69;
+
+    font-family: sans-serif;
+}
+
+.background {
+    background-image: url("https://images.pexels.com/photos/7303151/pexels-photo-7303151.jpeg?auto=compress&cs=tinysrgb&w=600.jpg");
+    height: 150vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#label {
+    color: black;
+    font-weight: 100;
+    font-size: 22px;
+}
+
+.alert {
+    text-align: center;
+    font-size: 17px;
+    font-family: cursive;
+    font-weight: bolder;
+    color: white;
+
+}

@@ -1,0 +1,40 @@
+<body>
+  <div class="background">
+    <div class="container ">
+      <h1 class="mb-3">Specific Merchants Details</h1>
+      <table class="table" *ngIf="restaurant ">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">RestaurantName</th>
+            <th scope="col">ContactName</th>
+            <th scope="col">PinCode</th>
+            <th scope="col">Location</th>
+            <th scope="col">Website</th>
+            <th scope="col">PhoneNumber</th>
+            <th scope="col">AverageDailyTrasaction</th>
+            <th scope="col">Actions </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+
+            <td class="td">{{restaurant.id}}</td>
+            <td class="td">{{restaurant.restaurantName}}</td>
+            <td class="td">{{restaurant.contactName}}</td>
+            <td class="td">{{restaurant.pinCode}}</td>
+            <td class="td">{{restaurant.location}}</td>
+            <td class="td">{{restaurant.website}}</td>
+            <td class="td">{{restaurant.phonenumber}}</td>
+            <td class="td">{{restaurant.averageDailyTrasaction}}</td>
+            <td>
+              <button class="btn btn-success btn-sm" [routerLink]="['/restaurant','edit',restaurant.id]"> Edit</button>
+              <button type="button" class="btn btn-danger btn-sm" [routerLink]="['/restaurant']"
+                (click)="deleteRestaurant(restaurant.id)"> Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

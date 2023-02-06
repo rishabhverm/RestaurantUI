@@ -1,0 +1,40 @@
+<body>
+   
+  <div class="background">
+<div class="container ">
+  <h1 class="mb-3">List of All Reastaurants</h1>
+  <label>Search Restaurant Names</label>
+  <table class="table" *ngIf="restaurant && restaurant.length>0">
+    <thead>
+      <tr>
+        <th class="col" scope="col">ID</th>
+        <th class="col"  scope="col">RestaurantName</th>
+        <th class="col" scope="col">ContactName</th>
+        <th  class="col"scope="col">PinCode</th>
+        <th class="col" scope="col">Location</th>
+        <th class="col" class="col" scope="col">Website</th>
+        <th class="col" scope="col">PhoneNumber</th>
+        <th class="col" scope="col">AverageDailyTrasaction</th>
+        <th class="col" scope="col">Specific Details </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of restaurant">
+
+        <td class="td">{{item.id}}</td>
+        <td class="td">{{item.restaurantName}}</td>
+        <td class="td">{{item.contactName}}</td>
+        <td class="td">{{item.pinCode}}</td>
+        <td class="td">{{item.location}}</td>
+        <td class="td">{{item.website}}</td>
+        <td class="td">{{item.phonenumber}}</td>
+        <td class="td">{{item.averageDailyTrasaction}}</td>
+        <td ><a [routerLink]="['/restaurant','view',item.id]"> VIEW</a></td>
+      </tr>
+      <p *ngIf="!restaurant || restaurant.length<=0">No Restaurant Found</p>
+
+    </tbody>
+  </table>
+</div>
+</div>
+</body>
